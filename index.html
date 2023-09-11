@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axios GET Example</title>
+</head>
+<body>
+  <button id="getDataButton">Fetch Data</button>
+  <div id="dataContainer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // Function to fetch data when the button is clicked
+    function fetchData() {
+      
+
+
+  axios.patch('https://jsonplaceholder.typicode.com/users/1', {
+  name: 'b',
+})
+  .then(response => console.log(response.data))
+  .catch(error => console.error(error));
+    }
+
+    // Attach click event listener to the button
+    const getDataButton = document.getElementById('getDataButton');
+    getDataButton.addEventListener('click', fetchData);
+  </script>
+</body>
+</html>
